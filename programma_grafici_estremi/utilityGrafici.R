@@ -51,23 +51,23 @@ if(grepl("^(P|p)r.?c.*$",PARAM)){
     
   }else if(PARAM %in% c("fd")){#FINE TMAX/TMIN...
   
-    SIMBOLO<-"Giorni con Gelo (n)"
+    SIMBOLO<-"Giorni con Gelo"
     creaListaParametri(symAsseY=SIMBOLO,limitiAsseY=c(-35,15),stepAsseY=5,tx=NULL,ty=NULL,modificaEtichette="^-?.+5$")->plista
     
     
   }else if(PARAM %in% c("tr")){#FINE TMAX/TMIN...
     
-    SIMBOLO<-"Notti Tropicali (n)"
+    SIMBOLO<-"Notti Tropicali"
     creaListaParametri(symAsseY=SIMBOLO,limitiAsseY=c(-15,35),stepAsseY=5,tx=NULL,ty=NULL,modificaEtichette="^.*5$")->plista
     
     
   }else if(PARAM %in% c("su")){#FINE TMAX/TMIN...
     
-    SIMBOLO<-"Giorni Estivi (n)"
+    SIMBOLO<-"Giorni Estivi"
     creaListaParametri(symAsseY=SIMBOLO,limitiAsseY=c(-20,35),stepAsseY=5,tx=NULL,ty=NULL,modificaEtichette="^.*5$")->plista
   }else if(PARAM %in% c("wsdi")){#FINE TMAX/TMIN...
     
-    SIMBOLO<-"Onde di Calore (n)"
+    SIMBOLO<-"WSDI (giorni)"
     creaListaParametri(symAsseY=SIMBOLO,limitiAsseY=c(-10,50),stepAsseY=5,tx=NULL,ty=NULL,modificaEtichette="^.*5$")->plista
     
   }else if(PARAM %in% c("tn10p")){#FINE TMAX/TMIN...
