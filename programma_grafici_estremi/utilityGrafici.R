@@ -52,45 +52,55 @@ if(grepl("^(P|p)r.?c.*$",PARAM)){
   }else if(PARAM %in% c("fd")){#FINE TMAX/TMIN...
   
     SIMBOLO<-"Giorni con Gelo"
+    SIMBOLO<-paste0(SIMBOLO," - Anomalia")
     creaListaParametri(symAsseY=SIMBOLO,limitiAsseY=c(-35,15),stepAsseY=5,tx=NULL,ty=NULL,modificaEtichette="^-?.+5$")->plista
     
     
   }else if(PARAM %in% c("tr")){#FINE TMAX/TMIN...
     
     SIMBOLO<-"Notti Tropicali"
+    SIMBOLO<-paste0(SIMBOLO," - Anomalia")
     creaListaParametri(symAsseY=SIMBOLO,limitiAsseY=c(-15,35),stepAsseY=5,tx=NULL,ty=NULL,modificaEtichette="^.*5$")->plista
     
     
   }else if(PARAM %in% c("su")){#FINE TMAX/TMIN...
     
     SIMBOLO<-"Giorni Estivi"
+    SIMBOLO<-paste0(SIMBOLO," - Anomalia")
     creaListaParametri(symAsseY=SIMBOLO,limitiAsseY=c(-20,35),stepAsseY=5,tx=NULL,ty=NULL,modificaEtichette="^.*5$")->plista
   }else if(PARAM %in% c("wsdi")){#FINE TMAX/TMIN...
     
-    SIMBOLO<-"WSDI (giorni)"
+    SIMBOLO<-"WSDI"
+    SIMBOLO<-paste0(SIMBOLO," - Anomalia (giorni)")
     creaListaParametri(symAsseY=SIMBOLO,limitiAsseY=c(-10,50),stepAsseY=5,tx=NULL,ty=NULL,modificaEtichette="^.*5$")->plista
     
   }else if(PARAM %in% c("tn10p")){#FINE TMAX/TMIN...
     
-    SIMBOLO<-"Notti Fredde (%)"
+    SIMBOLO<-"Notti Fredde"
+    SIMBOLO<-paste0(SIMBOLO," - Anomalia (%)")
     creaListaParametri(symAsseY=SIMBOLO,limitiAsseY=c(-8,5),stepAsseY=1,tx=NULL,ty=NULL,modificaEtichette="^-?(9|7|5|3|1)$")->plista
     
   }else if(PARAM %in% c("tx10p")){#FINE TMAX/TMIN...
     
-    SIMBOLO<-"Giorni Freddi (%)"
+    SIMBOLO<-"Giorni Freddi"
+    SIMBOLO<-paste0(SIMBOLO," - Anomalia (%)")
     creaListaParametri(symAsseY=SIMBOLO,limitiAsseY=c(-8,6),stepAsseY=1,tx=NULL,ty=NULL,modificaEtichette="^-?(9|7|5|3|1)$")->plista
     
   }else if(PARAM %in% c("tx90p")){#FINE TMAX/TMIN...
     
-    SIMBOLO<-"Giorni Caldi (%)"
+    SIMBOLO<-"Giorni Caldi"
+    SIMBOLO<-paste0(SIMBOLO," - Anomalia (%)")
     creaListaParametri(symAsseY=SIMBOLO,limitiAsseY=c(-8,18),stepAsseY=2,tx=NULL,ty=NULL,modificaEtichette="3$")->plista
     
   }else if(PARAM %in% c("tn90p")){#FINE TMAX/TMIN...
     
-    SIMBOLO<-"Notti Calde (%)"
+    SIMBOLO<-"Notti Calde"
+    SIMBOLO<-paste0(SIMBOLO," - Anomalia (%)")
     creaListaParametri(symAsseY=SIMBOLO,limitiAsseY=c(-6,18),stepAsseY=2,tx=NULL,ty=NULL,modificaEtichette="3$")->plista
   }      
 
+  
+  
 }
 ###############################################################
 
